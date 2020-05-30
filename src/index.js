@@ -1,9 +1,11 @@
+import IconJar from './lib/iconjar';
+
 /**
  * Exported module
- * @type {Boolean}
+ * @type {IconJar}
  */
-function myModule() {
-  return true;
+function iconJarExporter(name, children) {
+  return new IconJar(name, children);
 }
 
-export default myModule;
+export default iconJarExporter;

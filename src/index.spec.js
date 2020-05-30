@@ -1,12 +1,16 @@
-import myModule from '.';
+import IconJarExporter from '.';
+import IconJar from './lib/iconjar';
 
-/** @test {myModule} */
-describe('myModule', () => {
+/** @test {IconJarExporter} */
+describe('IconJarExporter', () => {
   it('exists', () => {
-    expect(myModule).toBeDefined();
+    expect(IconJarExporter).toBeDefined();
   });
 
-  it('returns true', () => {
-    expect(myModule()).toBe(true);
+  it('returns instance of IconJar', () => {
+    expect(IconJarExporter('name')).toBeInstanceOf(IconJar);
+  });
+  it('can be chainable', () => {
+    expect(IconJarExporter('name').addNewGroup('x', () => {})).toBeInstanceOf(IconJar);
   });
 });

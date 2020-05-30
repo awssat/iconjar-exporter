@@ -1,13 +1,13 @@
 {
-  "name": "package-skeleton",
-  "version": "1.0.5",
-  "description": "Skeleton of a simple NPM Package with Babel and CI already configured.",
-  "license": "ISC",
+  "name": "iconjar-exporter",
+  "version": "1.0.0",
+  "description": "Generate && export your icons to a IconJar format",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amercier/npm-package-skeleton"
+    "url": "https://github.com/awssat/iconjar-exporter"
   },
-  "author": "Alex Mercier <pro.alexandre.mercier@gmail.com> (http://amercier.com)",
+  "author": "Abdulrahman Alshuwayi <hi@abdumu.com> (http://awssat.com)",
   "engines": {
     "node": ">=6",
     "npm": ">=3"
@@ -31,19 +31,6 @@
   ],
   "main": "dist/index.js",
   "keywords": [
-    "package",
-    "skeleton",
-    "example",
-    "node",
-    "npm",
-    "babel",
-    "ci",
-    "code",
-    "codecov",
-    "coverage",
-    "eslint",
-    "gemnasium",
-    "jest"
   ],
   "dependencies": {},
   "devDependencies": {
