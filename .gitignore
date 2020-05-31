@@ -3,7 +3,7 @@
 /esdoc/
 /node_modules/
 /npm-debug.log
-
+/example/exports
 # Lockfiles for apps, but not for packages.
 # https://github.com/sindresorhus/ama/issues/479#issuecomment-310661514
 /package-lock.json

@@ -34,10 +34,10 @@ class IconJar {
     } else {
       this.children = [];
     }
-    this.groups = [];
-    this.sets = [];
-    this.icons = [];
-    this.licenses = [];
+    this.groups = {};
+    this.sets = {};
+    this.icons = {};
+    this.licenses = {};
     this.saveLocation = null;
   }
 
@@ -51,6 +51,21 @@ class IconJar {
       throw new TypeError(`'addSet' method can only receive a parameter of type 'IconJarSet'`);
     }
     this.children.push(set);
+    return this;
+  }
+
+  /**
+   * Add new set and from the callback you can add icons
+   * @param {string} name
+   * @param {function(IconJarSet):void} callback
+   * @return {this}
+   */
+  addNewSet(name, callback) {
+    const set = new IconJarSet(name);
+    if (typeof callback === 'function') {
+      callback(set);
+    }
+    this.addSet(set);
     return this;
   }
 
